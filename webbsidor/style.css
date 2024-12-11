@@ -86,15 +86,23 @@ containerSum {
     gap: 10px;
 }
 
+containerNumbers {
+    width: 90%;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+    gap: 5px;
+}
+
 .numberInDiv {
    background-color: rgb(213, 244, 213);
    border: 1px solid lightgray;
    border-radius: 5px;
    color: black;
-   width: 30px;
-   height: 30px;
+   padding: 5px;
 
-   display: grid;
-   grid-template-columns: 1fr;
-
+   display: flex;
+   justify-content: center;
+   align-items: center;
 }

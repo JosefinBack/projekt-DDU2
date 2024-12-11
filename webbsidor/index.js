@@ -11,7 +11,7 @@ function createNumbers (number) {
     return randomNumbers; 
 }
 
-createNumbers(10);
+createNumbers(100);
 
 function createDivs () {
 
