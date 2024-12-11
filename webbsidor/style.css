@@ -75,12 +75,26 @@ containerSum {
     height: 20px;
 }
 
+#number1 {
+    width: 100px;
+    height: 20px;
+}
+
 .boxes {
     margin: auto; 
     display: flex;
     gap: 10px;
 }
 
-label {
+.numberInDiv {
+   background-color: rgb(213, 244, 213);
+   border: 1px solid lightgray;
+   border-radius: 5px;
+   color: black;
+   width: 30px;
+   height: 30px;
+
+   display: grid;
+   grid-template-columns: 1fr;
 
 }
