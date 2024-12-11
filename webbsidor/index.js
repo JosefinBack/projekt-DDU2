@@ -1,5 +1,7 @@
 
 const contNumber = document.querySelector("containerNumbers");
+const buttonCreate = document.getElementById("create");
+let inputNumber = document.getElementById("number"); 
 
 
 let randomNumbers = [];
@@ -11,7 +13,12 @@ function createNumbers (number) {
     return randomNumbers; 
 }
 
-createNumbers(100);
+
+buttonCreate.addEventListener("click", function () {
+    let number = inputNumber.value; 
+    createNumbers(number);
+}); 
+
 
 function createDivs () {
 
