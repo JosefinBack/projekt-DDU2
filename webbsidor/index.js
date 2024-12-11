@@ -1,26 +1,26 @@
-
-const contNumber = document.querySelector("containerNumbers");
+const contNumber = document.querySelector("#numbers");
 const buttonCreate = document.getElementById("create");
-let inputNumber = document.getElementById("number"); 
-
+let inputNumber = document.getElementById("number");
 
 let randomNumbers = [];
 
-function createNumbers (number) {
+function createNumbers(number) {
+    randomNumbers = []; // Rensa arrayen innan vi genererar nya nummer
     for (let i = 0; i < number; i++) {
-        randomNumbers.push(Math.floor(Math.random() * 101));
+        randomNumbers.push(Math.floor(Math.random() * 101)); // Skapa slumpmässiga tal mellan 0 och 100
     }
-    return randomNumbers; 
+    return randomNumbers;
 }
 
-
 buttonCreate.addEventListener("click", function () {
-    let number = inputNumber.value; 
-    createNumbers(number);
-}); 
+    let number = Number(inputNumber.value); // Hämta värdet från input och konvertera till ett nummer
+    createNumbers(number); // Skapa de slumpmässiga numren
+    createDivs(); // Skapa divar för varje tal
+});
 
 
-function createDivs () {
+function createDivs() {
+    contNumber.innerHTML = ""; // Rensa innehållet innan nya divar läggs till
 
     for (let i = 0; i < randomNumbers.length; i++) {
         let divNumber = document.createElement("div");
@@ -28,10 +28,8 @@ function createDivs () {
         divNumber.textContent = randomNumbers[i];
         contNumber.appendChild(divNumber);
     }
-    
 }
 
-createDivs();
 
 
 
