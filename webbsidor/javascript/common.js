@@ -21,12 +21,6 @@ function createDivs() { //skapar divarna
         divNumber.classList.add("numberInDiv");
         divNumber.textContent = randomNumbers[i];
         containerNumber.appendChild(divNumber);
-  
-        // divNumber.addEventListener("click", function () {
-        //     divNumber.style.backgroundColor = "blue";
-        //     sumNumber = Number(divNumber.textContent) + sumNumber;
-        //     sumOfMarkedNumbers.textContent = sumNumber;
-        //   });
     }
   }
 
