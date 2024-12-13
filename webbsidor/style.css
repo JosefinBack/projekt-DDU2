@@ -56,17 +56,24 @@ containerSum {
     margin: 20px;
 }
 
-#number{
-    width: 50px;
-    height: 20px;
-}
-
-#number1, #number3  {
+.boxWithNumbers  {
     width: 100px;
     height: 20px;
     border: 1px solid black;
     font-size: 16px;
     text-align: center;
+}
+
+.biggerBox {
+    height: auto; 
+    width: 300px;
+    border: 1px solid black;
+    font-size: 16px;
+    text-align: center;
+}
+
+#number4 {
+    width: 300px;
 }
 
 .boxes {

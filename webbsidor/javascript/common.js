@@ -1,5 +1,5 @@
 const containerNumber = document.querySelector("#numbers");
-let inputNumber = document.getElementById("number");
+let inputNumber = document.querySelector(".boxWithNumbers");
 let divNumber = document.createElement("div");
 const buttonCreate = document.getElementById("create");
 
