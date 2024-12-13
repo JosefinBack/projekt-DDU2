@@ -70,7 +70,7 @@ containerSum {
     gap: 30px;
 }
 
-#number {
+#number, #number3 {
     width: 50px;
     height: 20px;
 }
@@ -78,11 +78,15 @@ containerSum {
 #number1 {
     width: 100px;
     height: 20px;
+    border: 1px solid black;
+    font-size: 14px;
+    text-align: center;
 }
 
 .boxes {
     margin: auto; 
     display: flex;
+    align-items: center;
     gap: 10px;
 }
 
