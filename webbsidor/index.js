@@ -31,6 +31,3 @@ function createDivs() {
 }
 
 
-
-
-//när man klickar på knappen "create" så ska man kunda ändra hur många kolumner som grid ska ha.
