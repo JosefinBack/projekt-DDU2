@@ -2,8 +2,7 @@ const containerNumber = document.querySelector("#numbers");
 const buttonCreate = document.getElementById("create");
 const buttonReset = document.getElementById("reset");
 let inputNumber = document.getElementById("number");
-let inputSumofNumbers = document.getElementById("number1");
-let sumOfMarkedNumbers = document.getElementById("number3");
+
 
 let randomNumbers = [];
 
@@ -13,31 +12,19 @@ function createNumbers(number) {
         randomNumbers.push(Math.floor(Math.random() * 101)); // Skapa slumpmässiga tal mellan 0 och 100
     }
     return randomNumbers;
-}
-
-let sumNumber = 0; 
+} 
 
 function createDivs() {
     containerNumber.innerHTML = ""; // Rensa innehållet innan nya divar läggs till
+    let divNumber; 
 
     for (let i = 0; i < randomNumbers.length; i++) {
         let divNumber = document.createElement("div");
         divNumber.classList.add("numberInDiv");
         divNumber.textContent = randomNumbers[i];
         containerNumber.appendChild(divNumber);
-        
-        divNumber.addEventListener("click", function () {
-            divNumber.style.backgroundColor = "blue";
-            sumNumber = Number(divNumber.textContent) + sumNumber;
-            sumOfMarkedNumbers.textContent = sumNumber;
-        });
-
-        buttonReset.addEventListener("click", function () {
-            sumOfMarkedNumbers.textContent = "-";
-            sumNumber = 0;  
-            divNumber.style.backgroundColor = ""; 
-        })
     }
+    return divNumber;
 }
 
 function sumOfNumbers (array) {
@@ -49,16 +36,3 @@ function sumOfNumbers (array) {
     return resultOfNumbers;
 }
 sumOfNumbers(randomNumbers);
-
-
-/*-----------funktioner slut -------------*/
-
-buttonCreate.addEventListener("click", function () {
-    let number = Number(inputNumber.value); // Hämta värdet från input och konvertera till ett nummer
-    createNumbers(number); // Skapa de slumpmässiga numren
-    createDivs(); // Skapa divar för varje tal
-
-    inputSumofNumbers.textContent = sumOfNumbers(randomNumbers);
-});
-
-sumOfMarkedNumbers.textContent = "-";
