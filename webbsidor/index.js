@@ -1,7 +1,9 @@
-const contNumber = document.querySelector("#numbers");
+const containerNumber = document.querySelector("#numbers");
 const buttonCreate = document.getElementById("create");
+const buttonReset = document.getElementById("reset");
 let inputNumber = document.getElementById("number");
 let inputSumofNumbers = document.getElementById("number1");
+let sumOfMarkedNumbers = document.getElementById("number3");
 
 let randomNumbers = [];
 
@@ -13,14 +15,28 @@ function createNumbers(number) {
     return randomNumbers;
 }
 
+let sumNumber = 0; 
+
 function createDivs() {
-    contNumber.innerHTML = ""; // Rensa innehållet innan nya divar läggs till
+    containerNumber.innerHTML = ""; // Rensa innehållet innan nya divar läggs till
 
     for (let i = 0; i < randomNumbers.length; i++) {
         let divNumber = document.createElement("div");
         divNumber.classList.add("numberInDiv");
         divNumber.textContent = randomNumbers[i];
-        contNumber.appendChild(divNumber);
+        containerNumber.appendChild(divNumber);
+        
+        divNumber.addEventListener("click", function () {
+            divNumber.style.backgroundColor = "blue";
+            sumNumber = Number(divNumber.textContent) + sumNumber;
+            sumOfMarkedNumbers.textContent = sumNumber;
+        });
+
+        buttonReset.addEventListener("click", function () {
+            sumOfMarkedNumbers.textContent = "-";
+            sumNumber = 0;  
+            divNumber.style.backgroundColor = ""; 
+        })
     }
 }
 
@@ -45,5 +61,4 @@ buttonCreate.addEventListener("click", function () {
     inputSumofNumbers.textContent = sumOfNumbers(randomNumbers);
 });
 
-
-//när man klickar på divarna då ka man kunna lägga ihop summan i number3
+sumOfMarkedNumbers.textContent = "-";
