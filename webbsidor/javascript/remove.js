@@ -12,17 +12,19 @@ let selectedNumber;
 
 buttonNewNumber.addEventListener("click", function () {
     // Välj en slumpmässig index för en div
-    const randomIndex = Math.floor(Math.random() * numberInDivs.length);
+    // const randomIndex = Math.floor(Math.random() * randomNumbers.length);
     
-    // Hämta den slumpmässigt valda divan
-    selectedDiv = numberInDivs[randomIndex];
+    // // Hämta den slumpmässigt valda divan
+    // selectedDiv = numberInDivs[randomIndex];
     
-    // Hämta numret från den slumpmässigt valda divan
-    selectedNumber = selectedDiv.textContent;
+    // // Hämta numret från den slumpmässigt valda divan
+    // selectedNumber = selectedDiv.textContent;
 
     // Återställ färgen på alla divar
     for (let i = 0; i < numberInDivs.length; i++) {
-        numberInDivs[i].style.backgroundColor = ""; // Återställ färgen
+        if (numberInDivs[i].style.backgroundColor === "yellow") {
+            numberInDivs[i].style.backgroundColor = ""; 
+        }; // Återställ färgen
     }
 
     // Markera alla divar som matchar det valda numret
@@ -38,11 +40,22 @@ buttonNewNumber.addEventListener("click", function () {
     return selectedDiv; 
 });
 
+
+//inte riktigt rätt. NewNumber ska även kunna välja en siffra som inte finns i listan och då ska remove-dicen uppdateras med stt säga "Nothing to remove"
     
 buttonRemove.addEventListener("click", function () {
-    selectedDiv.textContent = "X"
-    selectedDiv.style.backgroundColor = "red"; 
+    let counter = 0; 
+
+    for (let i = 0; i < numberInDivs.length; i++) {
+        if (numberInDivs[i].style.backgroundColor === "yellow") { counter++ 
+            // Ändra textinnehållet till "X"
+            numberInDivs[i].textContent = "X";
+
+            // Ändra bakgrundsfärgen till röd
+            numberInDivs[i].style.backgroundColor = "red"; 
+        }
+    }
+    removeChoosenNumber.textContent = `${choosenNumber.textContent} was removed ${counter} times `;
 });
 
-  //när jag klickar på knappen remove så ska alla divar med det innehållet tas bort.
 
