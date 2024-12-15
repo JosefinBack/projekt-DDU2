@@ -8,11 +8,9 @@ sumOfMarkedNumbers.textContent = "-";
 
 buttonCreate.addEventListener("click", function (){
   createDivs();
-
+  
   inputSumOfNumbers.textContent = sumOfNumbers(randomNumbers);//summerar alla nummer och lägger till dem i diven i mitten
-
-
-})
+});
 
 buttonReset.addEventListener("click", function () {//reset summan
     createDivs();//för att jag ska komma åt divNumber

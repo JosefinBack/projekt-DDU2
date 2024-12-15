@@ -1,16 +1,48 @@
 const buttonNewNumber = document.querySelector("#new");
 const buttonRemove = document.querySelector("#remove");
-let newNumber = document.getElementById("numberNew"); 
+let choosenNumber = document.getElementById("numberNew"); 
 let numberInDivs = document.getElementsByClassName("numberInDiv");
-let boxNewNumber = document.getElementById("numberRemove"); 
+let removeChoosenNumber = document.getElementById("numberRemove"); 
 
-newNumber.textContent = "-"; 
-    buttonNewNumber.addEventListener("click", function (){
-        newNumber.textContent = divNumber.textContent;
+choosenNumber.textContent = "-"; 
+let lastSelectedDiv = null;
+let selectedDiv; 
+let selectedNumber;
 
-         
-    });
 
-  //när jag klickar på knappen så ska ett random nummer väljas från divarna och textContent ska då läggas i rutan
-  //funderar på om jag behöver använda math.random på något sätt för att plocka ut en random div...?
+buttonNewNumber.addEventListener("click", function () {
+    // Välj en slumpmässig index för en div
+    const randomIndex = Math.floor(Math.random() * numberInDivs.length);
+    
+    // Hämta den slumpmässigt valda divan
+    selectedDiv = numberInDivs[randomIndex];
+    
+    // Hämta numret från den slumpmässigt valda divan
+    selectedNumber = selectedDiv.textContent;
+
+    // Återställ färgen på alla divar
+    for (let i = 0; i < numberInDivs.length; i++) {
+        numberInDivs[i].style.backgroundColor = ""; // Återställ färgen
+    }
+
+    // Markera alla divar som matchar det valda numret
+    for (let i = 0; i < numberInDivs.length; i++) {
+        if (numberInDivs[i].textContent === selectedNumber) {
+            numberInDivs[i].style.backgroundColor = "yellow"; // Ändra färg
+        }
+    }
+
+    // Uppdatera valt nummer i choosenNumber
+    choosenNumber.textContent = selectedNumber;
+
+    return selectedDiv; 
+});
+
+    
+buttonRemove.addEventListener("click", function () {
+    selectedDiv.textContent = "X"
+    selectedDiv.style.backgroundColor = "red"; 
+});
+
+  //när jag klickar på knappen remove så ska alla divar med det innehållet tas bort.
 
