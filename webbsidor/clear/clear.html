@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Numbers:: Sum</title>
+    <title>Numbers:: Clear</title>
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
@@ -14,24 +14,19 @@
         <containerSum>
             <box1 class="boxes">
                 <label for="number">How many nubers do you want in the grid?</label>
-                <input type="text" id="number" class ="boxWithNumbers"> 
+                <input type="text" id="number" class="boxWithNumbers">  
                 <button id="create">Create</button>
             </box1>
             <box2 class="boxes">
-                <p>Sum of all:</p>
-                <div id="number1" class="boxWithNumbers"></div>
+                <button id="clearButton">Fill cleared divs</button>
             </box2>
-            <box3 class="boxes">
-                <p>Sum of marked:</p>
-                <div id="number3" class="boxWithNumbers"></div>
-                <button id ="reset">Reset</button>
-            </box3>
-            <container id="numbers">
-
-            </container>
         </containerSum>
+        <container id="numbers">
+
+        </container>
+
     </main>
-<script src="../common.js"></script>
-<script src="../javascript/sum.js"></script>
+    <script src="../common.js"></script>
+    <script src="clear.js"></script>
 </body>
 </html>

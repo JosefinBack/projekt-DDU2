@@ -4,19 +4,24 @@ let inputSumOfNumbers = document.getElementById("number1");
 let sumOfMarkedNumbers = document.getElementById("number3");
 
 let sumNumber = 0; 
+
 sumOfMarkedNumbers.textContent = "-";
 
 buttonCreate.addEventListener("click", function (){
-  createDivs();
-  
-  inputSumOfNumbers.textContent = sumOfNumbers(randomNumbers);//summerar alla nummer och lägger till dem i diven i mitten
+  inputSumOfNumbers.textContent = sumOfNumbers(randomNumbers); 
+//summerar alla nummer och lägger till dem i diven i mitten
 });
 
+
 buttonReset.addEventListener("click", function () {//reset summan
-    createDivs();//för att jag ska komma åt divNumber
+
+  const allDivs = document.querySelectorAll(".numberInDiv");
+  for (let i = 0; i < allDivs.length; i++) {
+    allDivs[i].style.backgroundColor = "";
+    }
 
     sumOfMarkedNumbers.textContent = "-";
-    divNumber.style.backgroundColor = ""; 
+    sumNumber = 0; 
 });
 
 
@@ -40,7 +45,9 @@ function sumOfNumbers (array) { //summerar alla nummer (sum-sidan)
   }
   return resultOfNumbers;
 }
+
 sumOfNumbers(randomNumbers);
 
-// Anropa createDivs från common.js
-createDivs();//lägg sist
+
+let totalSum = sumOfNumbers(randomNumbers); // Summera alla nummer i arrayen
+inputSumOfNumbers.textContent = totalSum; // Skriv ut summan i mitten-diven

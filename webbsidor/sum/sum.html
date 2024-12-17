@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Numbers:: Remove</title>
+    <title>Numbers:: Sum</title>
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
@@ -14,21 +14,24 @@
         <containerSum>
             <box1 class="boxes">
                 <label for="number">How many nubers do you want in the grid?</label>
-                <input type="text" id="number" class="boxWithNumbers">  
+                <input type="text" id="number" class ="boxWithNumbers"> 
                 <button id="create">Create</button>
             </box1>
             <box2 class="boxes">
-                <button id="new">New random number:</button>
-                <div id="numberNew" class="boxWithNumbers"></div>
-                    <button id ="remove">Remove:</button>
-                    <div id="numberRemove" class ="biggerBox"></div>
+                <p>Sum of all:</p>
+                <div id="number1" class="boxWithNumbers"></div>
             </box2>
-        </containerSum>
-        <container id="numbers">
+            <box3 class="boxes">
+                <p>Sum of marked:</p>
+                <div id="number3" class="boxWithNumbers"></div>
+                <button id ="reset">Reset</button>
+            </box3>
+            <container id="numbers">
 
-        </container>
+            </container>
+        </containerSum>
     </main>
-    <script src="../common.js"></script>
-    <script src="../javascript/remove.js"></script>
+<script src="../common.js"></script>
+<script src="sum.js"></script>
 </body>
 </html>

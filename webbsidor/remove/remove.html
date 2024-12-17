@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Numbers:: Clear</title>
+    <title>Numbers:: Remove</title>
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
@@ -18,14 +18,17 @@
                 <button id="create">Create</button>
             </box1>
             <box2 class="boxes">
-                <button>Fill cleared divs</button>
+                <button id="new">New random number:</button>
+                <div id="numberNew" class="boxWithNumbers"></div>
+                    <button id ="remove">Remove:</button>
+                    <div id="numberRemove" class ="biggerBox"></div>
             </box2>
         </containerSum>
         <container id="numbers">
 
         </container>
-
     </main>
     <script src="../common.js"></script>
+    <script src="remove.js"></script>
 </body>
 </html>
