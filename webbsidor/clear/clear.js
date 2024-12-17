@@ -1,19 +1,23 @@
-const clearDivs = document.getElementById("clearButton"); 
+let clearDivs = document.getElementById("clearButton"); 
+
+// Lägg till en event listener på containern för att fånga upp klick på dess barn (divarna)
+containerNumber.addEventListener("click", function (event) {
+    if (event.target.classList.contains("numberInDiv")) {
+        event.target.style.backgroundColor = "blue"; 
+        event.target.style.color = "blue"; 
+    }
+});
+
+//vi sätter klick-eventet på föräldern och det kommer bubbla upp till barnen
 
 
+clearDivs.addEventListener("click", function () {
+    const allDivs = document.querySelectorAll(".numberInDiv");
+    for (let i = 0; i < allDivs.length; i++) {
+      allDivs[i].style.backgroundColor = "";
+      allDivs[i].style.color = "black"; 
+      }
+})
 
 
-
-
-
-
-
-// containerNumber.addEventListener("click", function () {
-//     createDivs() 
-//     divNumber.style.backgroundColor = "blue"; 
-//   });
-
-//   clearDivs.addEventListener("click", function () {
-//     createDivs();//för att jag ska komma åt divNumber
-//     divNumber.style.backgroundColor = ""; 
-//   });
+//det finns hover, active och ny bakgrundsfärg
