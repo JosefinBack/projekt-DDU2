@@ -8,14 +8,12 @@ let sumNumber = 0;
 sumOfMarkedNumbers.textContent = "-";
 
 buttonCreate.addEventListener("click", function (){
-  
   inputSumOfNumbers.textContent = sumOfNumbers(randomNumbers); 
 //summerar alla nummer och lägger till dem i diven i mitten
 });
 
 
 buttonReset.addEventListener("click", function () {//reset summan
-
   const allDivs = document.querySelectorAll(".numberInDiv");
   for (let i = 0; i < allDivs.length; i++) {
     allDivs[i].style.backgroundColor = "";
@@ -30,7 +28,7 @@ buttonReset.addEventListener("click", function () {//reset summan
 containerNumber.addEventListener("click", function (event) {
   if (event.target.classList.contains("numberInDiv")) {
       // Kontrollera att det är en div med klassen "numberInDiv" som klickats
-      event.target.style.backgroundColor = "white";
+      event.target.classList.add("target");
 
    //summerar markerade nummer 
       sumNumber = Number(event.target.textContent) + sumNumber;

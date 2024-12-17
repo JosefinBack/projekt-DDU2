@@ -1,0 +1,14 @@
+
+.target {
+    background-color: white;
+}
+
+#reset {
+    background-color: antiquewhite;
+    border-radius: 5px;
+}
+
+#reset:hover {
+    background-color: rgb(105, 199, 105);
+    border-radius: 5px;
+}
