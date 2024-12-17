@@ -7,35 +7,30 @@ howManyInGrid.value = 95; // Sätter input-värdet till 95
 
 let randomNumbers = [];
 
-function createNumbers(number) {//skapar slumpmässiga tal
+function createNumbers(numberFromUser) {//skapar slumpmässiga tal
     randomNumbers = []; // Rensa arrayen innan vi genererar nya nummer
-    for (let i = 0; i < number; i++) {
+    for (let i = 0; i < numberFromUser; i++) {
         randomNumbers.push(Math.floor(Math.random() * 101));
     }
     return randomNumbers;
 } 
 
-// divsWithRandomNumbers = [];
-
-function createDivs(number) { //skapar divarna
-    containerNumber.innerHTML = ""; // Rensa innehållet innan nya divar läggs till 
-    //divsWithRandomNumbers = [];//rensar tidigare divreferenser
-
-    createNumbers(number);
+function createDivs(numberFromUser) { //skapar divarna
+    containerNumber.innerHTML = ""; // Rensa innehållet innan nya divar läggs till
+    createNumbers(numberFromUser);//för att jag ska få nya slumpmässiga nummer varje gång functionen anropas, vilket blir varje gång som jag klickar på knappen "create"
   
     for (let i = 0; i < randomNumbers.length; i++) {
         let divNumber = document.createElement("div");
         divNumber.classList.add("numberInDiv");
         divNumber.textContent = randomNumbers[i];
         containerNumber.appendChild(divNumber);
-
-        //divsWithRandomNumbers.push(divNumber);
     }
 }; 
 
 buttonCreate.addEventListener("click", function () {
-    let number = Number(howManyInGrid.value); // Hämta  värdet från input och konvertera till ett nummer
-    createDivs(number); // Skapa divar för varje tal
+    let numberFromUser = Number(howManyInGrid.value); // Hämta  värdet från input och konvertera till ett nummer
+    createDivs(numberFromUser); // Skapa divar för varje tal
   });
+
 
  createDivs(95); 
