@@ -3,8 +3,7 @@ let clearDivs = document.getElementById("clearButton");
 // Lägg till en event listener på containern för att fånga upp klick på dess barn (divarna)
 containerNumber.addEventListener("click", function (event) {
     if (event.target.classList.contains("numberInDiv")) {
-        event.target.style.backgroundColor = "white"; 
-        event.target.style.color = "white"; 
+        event.target.classList.add("color");
     }
 });
 
