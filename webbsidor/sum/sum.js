@@ -30,7 +30,7 @@ buttonReset.addEventListener("click", function () {//reset summan
 containerNumber.addEventListener("click", function (event) {
   if (event.target.classList.contains("numberInDiv")) {
       // Kontrollera att det är en div med klassen "numberInDiv" som klickats
-      event.target.style.backgroundColor = "blue";
+      event.target.style.backgroundColor = "white";
 
    //summerar markerade nummer 
       sumNumber = Number(event.target.textContent) + sumNumber;

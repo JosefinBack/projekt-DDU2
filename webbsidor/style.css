@@ -104,3 +104,11 @@ containerSum {
    justify-content: center;
    align-items: center;
 }
+
+.numberInDiv:hover {
+    background-color: rgb(105, 199, 105);
+}
+
+.numberInDiv:active {
+    background-color: rgb(41, 112, 41);
+}

@@ -3,8 +3,8 @@ let clearDivs = document.getElementById("clearButton");
 // Lägg till en event listener på containern för att fånga upp klick på dess barn (divarna)
 containerNumber.addEventListener("click", function (event) {
     if (event.target.classList.contains("numberInDiv")) {
-        event.target.style.backgroundColor = "blue"; 
-        event.target.style.color = "blue"; 
+        event.target.style.backgroundColor = "white"; 
+        event.target.style.color = "white"; 
     }
 });
 
@@ -18,6 +18,3 @@ clearDivs.addEventListener("click", function () {
       allDivs[i].style.color = "black"; 
       }
 })
-
-
-//det finns hover, active och ny bakgrundsfärg

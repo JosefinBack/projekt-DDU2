@@ -14,7 +14,7 @@ buttonNewNumber.addEventListener("click", function () {
 
     // Återställ alla färger
     for (let i = 0; i < numberInDivs.length; i++) {
-            if (numberInDivs[i].style.backgroundColor === "yellow") {
+            if (numberInDivs[i].style.backgroundColor === "pink") {
             numberInDivs[i].style.backgroundColor = ""; 
             }; 
         }
@@ -22,7 +22,7 @@ buttonNewNumber.addEventListener("click", function () {
     // Kontrollera om numret finns i divarna
     for (let i = 0; i < numberInDivs.length; i++) {
         if (numberInDivs[i].textContent == randomIndex) {
-            numberInDivs[i].style.backgroundColor = "yellow";
+            numberInDivs[i].style.backgroundColor ="pink";
         }
     }
     selectedNumber = randomIndex;
@@ -32,7 +32,7 @@ buttonRemove.addEventListener("click", function () {
     let counter = 0; 
 
     for (let i = 0; i < numberInDivs.length; i++) {
-        if (numberInDivs[i].style.backgroundColor === "yellow") { 
+        if (numberInDivs[i].style.backgroundColor === "pink") { 
             counter++ ;
             // Ändra textinnehållet till "X"
             numberInDivs[i].textContent = "X";
