@@ -1,5 +1,6 @@
 //definierade variabler
 const containerNumber = document.querySelector("#numbers");
+let numberInDivs = document.getElementsByClassName("numberInDiv");
 
 //HTML-element
 const header = document.querySelector("header");
@@ -33,8 +34,6 @@ box1.appendChild(input);
 const buttonCreate = document.createElement("button");
 buttonCreate.textContent = "Create"; 
 box1.appendChild(buttonCreate); 
-
-
 
 const howManyInGrid = document.querySelector("input"); 
 howManyInGrid.value = 95; // Sätter input-värdet till 95

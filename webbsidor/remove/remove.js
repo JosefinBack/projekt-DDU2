@@ -1,7 +1,6 @@
 const buttonNewNumber = document.querySelector("#new");
 const buttonRemove = document.querySelector("#remove");
 let choosenNumber = document.getElementById("numberNew");
-let numberInDivs = document.getElementsByClassName("numberInDiv");
 let removeChoosenNumber = document.getElementById("numberRemove");
 
 choosenNumber.textContent = "-"; 
