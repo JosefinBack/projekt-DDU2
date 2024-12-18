@@ -1,7 +1,42 @@
+//definierade variabler
 const containerNumber = document.querySelector("#numbers");
-const howManyInGrid = document.getElementById("number"); 
-const buttonCreate = document.getElementById("create");
 
+//HTML-element
+const header = document.querySelector("header");
+const box1 = document.querySelector("#box1")
+
+//home-länken
+
+const homeButton = document.createElement("div");
+homeButton.textContent = "Home";
+homeButton.classList.add("linkTop");
+header.appendChild(homeButton); 
+
+homeButton.addEventListener("click", function () {
+    window.location.href = "../home.html"; 
+});
+
+
+//Input, create-knapp och text
+const lable = document.createElement("label");
+lable.textContent = "How many nubers do you want in the grid?"; 
+box1.appendChild(lable);
+
+//input
+const input = document.createElement("input");
+input.type = "text"; 
+input.id = "number"; 
+input.classList.add("boxWithNumbers");
+box1.appendChild(input); 
+
+//create-knapp
+const buttonCreate = document.createElement("button");
+buttonCreate.textContent = "Create"; 
+box1.appendChild(buttonCreate); 
+
+
+
+const howManyInGrid = document.querySelector("input"); 
 howManyInGrid.value = 95; // Sätter input-värdet till 95
 
 
@@ -33,4 +68,5 @@ buttonCreate.addEventListener("click", function () {
   });
 
 
- createDivs(95); 
+//funktionsanrop
+ createDivs(95); //skapa divarna direkt när jag laddar in på sidan

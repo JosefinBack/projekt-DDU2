@@ -72,10 +72,6 @@ containerSum {
     text-align: center;
 }
 
-#number4 {
-    width: 300px;
-}
-
 .boxes {
     margin: auto; 
     display: flex;
