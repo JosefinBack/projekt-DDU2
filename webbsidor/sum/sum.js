@@ -16,7 +16,7 @@ buttonCreate.addEventListener("click", function (){
 buttonReset.addEventListener("click", function () {//reset summan
   const allDivs = document.querySelectorAll(".numberInDiv");
   for (let i = 0; i < allDivs.length; i++) {
-    allDivs[i].style.backgroundColor = "";
+    allDivs[i].classList.remove("target"); 
     }
 
     sumOfMarkedNumbers.textContent = "-";

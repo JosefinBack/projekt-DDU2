@@ -11,9 +11,12 @@ containerNumber.addEventListener("click", function (event) {
 
 
 clearDivs.addEventListener("click", function () {
+    
     const allDivs = document.querySelectorAll(".numberInDiv");
     for (let i = 0; i < allDivs.length; i++) {
-      allDivs[i].style.backgroundColor = "";
-      allDivs[i].style.color = "black"; 
+      if (allDivs[i].classList.contains("color")){
+        allDivs[i].classList.remove("color");
       }
+    }
+
 })
