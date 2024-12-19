@@ -14,7 +14,7 @@ buttonNewNumber.addEventListener("click", function () {
     // Återställ alla färger
     for (let i = 0; i < numberInDivs.length; i++) {
             if (numberInDivs[i].classList.contains("pinkColor")) {
-            numberInDivs[i].style.backgroundColor = ""; 
+            numberInDivs[i].classList.remove("pinkColor"); 
             }; 
         }
 
@@ -39,7 +39,7 @@ buttonRemove.addEventListener("click", function () {
             numberInDivs[i].classList.add("blackColor");
 
             counter++ ;
-        }
+        } 
     }
     // Uppdatera removeChoosenNumber med rätt meddelande
     if (counter > 0) {

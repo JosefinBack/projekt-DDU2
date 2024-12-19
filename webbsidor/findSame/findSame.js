@@ -1,25 +1,34 @@
 let text = document.getElementById("textFindCopies");
-let counter = 0;
-let choosenNumber = null; 
+const originalText = text.textContent;
+let resetButton = document.getElementById("reset"); 
 
 containerNumber.addEventListener("click", function(event) {
     if(event.target.classList.contains("numberInDiv")) {
-        for(let i = 0; i < numberInDivs.length; i++){
-            if(event.target.textContent == numberInDivs[i].textContent) 
-                {
-                numberInDivs[i].classList.add("same");
-                numberInDivs[i] = choosenNumber;
+        let counter = 0;
+
+        for (let i = 0; i < numberInDivs.length; i++) {
+            numberInDivs[i].classList.remove("same");
+        }
+        for (let i = 0; i < numberInDivs.length; i++) {
+            if (event.target.textContent == numberInDivs[i].textContent) {
+                numberInDivs[i].classList.add("same"); // Lägg till klassen "same"
                 counter++;
+
+                if (counter > 0) {
+                    text.textContent = `${counter} copies of the number ${numberInDivs[i].textContent}`;
+                }
             }
         }
+        return counter; 
     }
-    return choosenNumber; 
-}); 
+});  
 
-
-if(counter > 0) {
-    text.textContent = `${choosenNumber.textContent} have ${counter} copies.`
+resetButton.addEventListener("click", function (){
+    for(let i = 0; i < numberInDivs.length; i++) {
+        if (numberInDivs[i].classList.contains("same")) {
+            numberInDivs[i].classList.remove("same"); 
+        }
     }
+    text.textContent = originalText;  
+});
 
-
-    //counter uppdateras inte, för den måste också returneras egentligen....
