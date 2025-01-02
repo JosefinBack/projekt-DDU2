@@ -63,14 +63,6 @@ containerSum {
     text-align: center;
 }
 
-.biggerBox {
-    height: 20px; 
-    width: 300px;
-    border: 1px solid black;
-    font-size: 16px;
-    text-align: center;
-}
-
 .boxes {
     margin: auto; 
     display: flex;
