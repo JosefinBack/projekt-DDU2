@@ -7,7 +7,6 @@ const header = document.querySelector("header");
 const box1 = document.querySelector("#box1")
 
 //home-länken
-
 const homeButton = document.createElement("div");
 homeButton.textContent = "Home";
 homeButton.classList.add("linkTop");
@@ -20,7 +19,7 @@ homeButton.addEventListener("click", function () {
 
 //Input, create-knapp och text
 const lable = document.createElement("label");
-lable.textContent = "How many nubers do you want in the grid?"; 
+lable.textContent = "How many numbers do you want in the grid?"; 
 box1.appendChild(lable);
 
 //input
@@ -36,7 +35,7 @@ buttonCreate.textContent = "Create";
 box1.appendChild(buttonCreate); 
 
 const howManyInGrid = document.querySelector("input"); 
-howManyInGrid.value = 95; // Sätter input-värdet till 95
+howManyInGrid.value = 100; // Sätter input-värdet till 95
 
 
 let randomNumbers = [];
@@ -68,4 +67,4 @@ buttonCreate.addEventListener("click", function () {
 
 
 //funktionsanrop
- createDivs(95); //skapa divarna direkt när jag laddar in på sidan
+ createDivs(100); //skapa divarna direkt när jag laddar in på sidan

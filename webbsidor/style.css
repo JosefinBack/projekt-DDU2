@@ -20,6 +20,7 @@ header {
     border-radius: 5px;
     color: black;
     padding: 5px 10px; 
+    font-size: 15px;
     text-align: center;
     height: 25px;
     
@@ -45,8 +46,6 @@ containerHome {
     gap: 30px;
     padding-top: 30px; 
 }
-
-/*----- SUM -----*/
 
 containerSum {
     display: flex;
