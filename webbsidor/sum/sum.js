@@ -6,6 +6,9 @@ let sumOfMarkedNumbers = document.getElementById("number3");
 let sumNumber = 0; 
 
 sumOfMarkedNumbers.textContent = "-";
+let totalSum = sumOfNumbers(randomNumbers); // Summera alla nummer i arrayen
+inputSumOfNumbers.textContent = totalSum; // Skriv ut summan i mitten-diven
+
 
 buttonCreate.addEventListener("click", function (){
   inputSumOfNumbers.textContent = sumOfNumbers(randomNumbers); 
@@ -47,6 +50,3 @@ function sumOfNumbers (array) { //summerar alla nummer (sum-sidan)
 
 sumOfNumbers(randomNumbers);
 
-
-let totalSum = sumOfNumbers(randomNumbers); // Summera alla nummer i arrayen
-inputSumOfNumbers.textContent = totalSum; // Skriv ut summan i mitten-diven

@@ -1,7 +1,8 @@
 .color {
-    background-color: black;
+    background-color: pink;
+    color: pink; 
 }
 
 .color:hover {
-    background-color: black;
+    background-color: pink;
 }
