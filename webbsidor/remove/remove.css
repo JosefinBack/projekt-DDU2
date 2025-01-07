@@ -1,3 +1,9 @@
+#removeSide {
+    background-image: url(../picture/removeBG.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
 .pinkColor {
     background-color: pink;
 }

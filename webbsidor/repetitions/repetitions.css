@@ -1,3 +1,9 @@
+#repSide {
+    background-image: url(../picture/repetitionsBG.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
 .biggerBox {
     height: auto; 
     width: 350px;

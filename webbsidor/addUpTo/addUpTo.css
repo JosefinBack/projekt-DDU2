@@ -1,3 +1,9 @@
+#addSide {
+    background-image: url(../picture/addUpToBG.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
 .rightNumber {
     background-color: pink;
 }

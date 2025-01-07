@@ -1,3 +1,8 @@
+#sumSide {
+    background-image: url(../picture/sumBG.jpg);
+    background-position: center;
+    background-size: cover;
+}
 
 .target {
     background-color: pink; 
