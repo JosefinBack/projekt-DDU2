@@ -4,5 +4,11 @@
 }
 
 .color:hover {
-    background-color: pink;
+    background-color: rgb(250, 137, 156);
+    color: rgb(250, 137, 156);
+}
+
+.color:active {
+    background-color: rgb(255, 46, 81);
+    color: rgb(255, 46, 81); 
 }

@@ -2,6 +2,7 @@
 const containerNumber = document.querySelector("#numbers");
 let numberInDivs = document.getElementsByClassName("numberInDiv");
 
+
 //HTML-element
 const header = document.querySelector("header");
 const box1 = document.querySelector("#box1")
@@ -34,8 +35,9 @@ const buttonCreate = document.createElement("button");
 buttonCreate.textContent = "Create"; 
 box1.appendChild(buttonCreate); 
 
-const howManyInGrid = document.querySelector("input"); 
-howManyInGrid.value = 100; // Sätter input-värdet till 95
+
+let howManyInGrid = document.querySelector("input"); 
+howManyInGrid.value = "-"; 
 
 
 let randomNumbers = [];
@@ -65,6 +67,3 @@ buttonCreate.addEventListener("click", function () {
     createDivs(numberFromUser); // Skapa divar för varje tal
   });
 
-
-//funktionsanrop
- createDivs(100); //skapa divarna direkt när jag laddar in på sidan
