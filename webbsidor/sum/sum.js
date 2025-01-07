@@ -1,7 +1,7 @@
 
 const buttonReset = document.getElementById("reset");
-let inputSumOfNumbers = document.getElementById("number1");
-let sumOfMarkedNumbers = document.getElementById("number3");
+let inputSumOfNumbers = document.getElementById("sum");
+let sumOfMarkedNumbers = document.getElementById("marked");
 
 let sumNumber = 0; 
 
@@ -40,13 +40,13 @@ containerNumber.addEventListener("click", function (event) {
 });
 
 
-function sumOfNumbers (array) { //summerar alla nummer (sum-sidan)
+function sumOfNumbers (array) { //summerar alla nummer 
   resultOfNumbers = 0; 
   for(let number of array) {
       resultOfNumbers = resultOfNumbers + number; 
   }
   return resultOfNumbers;
-}
+}; 
 
-sumOfNumbers(randomNumbers);
+
 

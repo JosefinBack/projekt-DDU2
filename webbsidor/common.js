@@ -67,3 +67,5 @@ buttonCreate.addEventListener("click", function () {
     createDivs(numberFromUser); // Skapa divar för varje tal
   });
 
+
+

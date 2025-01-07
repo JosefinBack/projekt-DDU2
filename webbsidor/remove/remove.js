@@ -4,9 +4,12 @@ let choosenNumber = document.getElementById("numberNew");
 let removeChoosenNumber = document.getElementById("numberRemove");
 
 choosenNumber.textContent = "-"; 
+removeChoosenNumber.textContent = " - ";
 let selectedNumber = null;
 
 buttonNewNumber.addEventListener("click", function () {
+    removeChoosenNumber.textContent = " - "; 
+
     // Generera ett slumpmässigt nummer mellan 0 och 100
     const randomIndex = Math.floor(Math.random() * 101);
     choosenNumber.textContent = randomIndex;
@@ -48,3 +51,8 @@ buttonRemove.addEventListener("click", function () {
         removeChoosenNumber.textContent = `Nothing to remove`;
     }
 });
+
+buttonCreate.addEventListener("click", function () {
+    choosenNumber.textContent = "-"; 
+    removeChoosenNumber.textContent = " - ";
+  });

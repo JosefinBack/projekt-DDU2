@@ -53,9 +53,3 @@ buttonCreate.addEventListener("click", function () {
 });
 
 
-
-
-
-//functionsanrop
-theMissingNumbers(); 
-mostRepeatedNumbers();
