@@ -15,7 +15,7 @@ containerNumber.addEventListener("click", function (event) {
 //vi sätter klick-eventet på föräldern och det kommer bubbla upp till barnen
 
 
-clearDivs.addEventListener("click", function (event) {
+clearDivs.addEventListener("click", function () {
   const allDivs = document.querySelectorAll(".numberInDiv");
 
     for (let i = 0; i < allDivs.length; i++) {

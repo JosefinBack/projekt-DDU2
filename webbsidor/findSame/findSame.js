@@ -1,6 +1,6 @@
-let text = document.getElementById("textFindCopies");
-const originalText = text.textContent;
-let resetButton = document.getElementById("reset"); 
+const textFind = document.getElementById("textFindCopies");
+const originalText = textFind.textContent;
+const resetButton = document.getElementById("reset"); 
 
 containerNumber.addEventListener("click", function(event) {
     if(event.target.classList.contains("numberInDiv")) {
@@ -9,17 +9,17 @@ containerNumber.addEventListener("click", function(event) {
         for (let i = 0; i < numberInDivs.length; i++) {
             numberInDivs[i].classList.remove("same");
         }
+
         for (let i = 0; i < numberInDivs.length; i++) {
             if (event.target.textContent == numberInDivs[i].textContent) {
-                numberInDivs[i].classList.add("same"); // Lägg till klassen "same"
+                numberInDivs[i].classList.add("same"); 
                 counter++;
 
                 if (counter > 0) {
-                    text.textContent = `${counter} copies of the number ${numberInDivs[i].textContent}`;
+                    textFind.textContent = `${counter} copies of the number ${numberInDivs[i].textContent}`;
                 }
             }
         }
-        return counter; 
     }
 });  
 
@@ -29,6 +29,6 @@ resetButton.addEventListener("click", function (){
             numberInDivs[i].classList.remove("same"); 
         }
     }
-    text.textContent = originalText;  
+    textFind.textContent = originalText;  
 });
 

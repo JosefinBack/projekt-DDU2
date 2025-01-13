@@ -3,13 +3,13 @@ const repeatedNumbers = document.getElementById("repeatedNumbers");
 
 
 function mostRepeatedNumbers() {
-    const allDivs = document.querySelectorAll(".numberInDiv")
+
     let mostRepeatedNumbers = []; 
     let highestCount = 0; 
     for(let i = 0; i < randomNumbers.length; i++) {
         let counter = 0;
         for(let j = 0; j <randomNumbers.length; j++) {
-            if (randomNumbers[i] === randomNumbers[j]) {
+            if (randomNumbers[i] == randomNumbers[j]) {
                 counter++; 
             }
         }
@@ -30,10 +30,7 @@ function mostRepeatedNumbers() {
             numberInDivs[x].classList.add("repeat"); 
         }
     }
-    
 }
-
-
 
 function theMissingNumbers() { 
     let missingNumbers = []; 
@@ -46,10 +43,7 @@ function theMissingNumbers() {
     numbersMissing.textContent = missingNumbers.join (", ");
 } 
 
-
 buttonCreate.addEventListener("click", function () {
     mostRepeatedNumbers();
     theMissingNumbers();
 });
-
-

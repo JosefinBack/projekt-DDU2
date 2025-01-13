@@ -1,12 +1,46 @@
+@font-face {
+    font-family: Merienda;
+    src: url(Fonts/Merienda-VariableFont_wght.ttf);
+}
+
 body {
     height: 100vh;
     margin: 0;
     font-family: Arial, Helvetica, sans-serif; 
 }
 
-@font-face {
-    font-family: Merienda;
-    src: url(Fonts/Merienda-VariableFont_wght.ttf);
+.boxes {
+    margin: auto; 
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.boxWithNumbers  {
+    width: 100px;
+    height: 20px;
+    border: 1px solid black;
+    font-size: 16px;
+    text-align: center;
+
+    background-color: white;
+}
+
+containerHome {
+    width: 100vw;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding-top: 30px; 
+}
+
+containerSum {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px;
 }
 
 #home { 
@@ -52,43 +86,10 @@ header {
     text-decoration: underline;
 }
 
-containerHome {
-    width: 100vw;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-    padding-top: 30px; 
-}
-
-containerSum {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 10px;
-    margin: 20px;
-}
-
-.boxWithNumbers  {
-    width: 100px;
-    height: 20px;
-    border: 1px solid black;
-    font-size: 16px;
-    text-align: center;
-
-    background-color: white;
-}
-
 .longerBox {
     width: 300px;
 }
 
-.boxes {
-    margin: auto; 
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
 
 #numbers {
     width: 90%;

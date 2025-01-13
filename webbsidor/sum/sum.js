@@ -1,22 +1,27 @@
-
 const buttonReset = document.getElementById("reset");
 let inputSumOfNumbers = document.getElementById("sum");
 let sumOfMarkedNumbers = document.getElementById("marked");
 
 let sumNumber = 0; 
 
-sumOfMarkedNumbers.textContent = "-";
-let totalSum = sumOfNumbers(randomNumbers); // Summera alla nummer i arrayen
-inputSumOfNumbers.textContent = totalSum; // Skriv ut summan i mitten-diven
+function sumOfNumbers (array) {
+  resultOfNumbers = 0; 
+  for(let number of array) {
+      resultOfNumbers = resultOfNumbers + number; 
+  }
+  return resultOfNumbers;
+}; 
 
+sumOfMarkedNumbers.textContent = "-";
+let totalSum = sumOfNumbers(randomNumbers); 
+inputSumOfNumbers.textContent = totalSum; 
 
 buttonCreate.addEventListener("click", function (){
   inputSumOfNumbers.textContent = sumOfNumbers(randomNumbers); 
-//summerar alla nummer och lägger till dem i diven i mitten
 });
 
 
-buttonReset.addEventListener("click", function () {//reset summan
+buttonReset.addEventListener("click", function (){
   const allDivs = document.querySelectorAll(".numberInDiv");
   for (let i = 0; i < allDivs.length; i++) {
     allDivs[i].classList.remove("target"); 
@@ -26,27 +31,11 @@ buttonReset.addEventListener("click", function () {//reset summan
     sumNumber = 0; 
 });
 
-
-// Lägg till en event listener på containerNumber för att hantera klick på alla divar
 containerNumber.addEventListener("click", function (event) {
   if (event.target.classList.contains("numberInDiv")) {
-      // Kontrollera att det är en div med klassen "numberInDiv" som klickats
       event.target.classList.add("target");
 
-   //summerar markerade nummer 
       sumNumber = Number(event.target.textContent) + sumNumber;
       sumOfMarkedNumbers.textContent = sumNumber;
   }
 });
-
-
-function sumOfNumbers (array) { //summerar alla nummer 
-  resultOfNumbers = 0; 
-  for(let number of array) {
-      resultOfNumbers = resultOfNumbers + number; 
-  }
-  return resultOfNumbers;
-}; 
-
-
-
