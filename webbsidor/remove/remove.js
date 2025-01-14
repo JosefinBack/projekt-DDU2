@@ -2,7 +2,6 @@ const buttonNewNumber = document.querySelector("#new");
 const buttonRemove = document.querySelector("#remove");
 let choosenNumber = document.getElementById("numberNew");
 let removeChoosenNumber = document.getElementById("numberRemove");
-let selectedNumber = null;
 
 
 choosenNumber.textContent = "-"; 
@@ -25,7 +24,6 @@ buttonNewNumber.addEventListener("click", function () {
             numberInDivs[i].classList.add("pinkColor"); 
         }
     }
-    selectedNumber = randomIndex;
 });
 
 buttonRemove.addEventListener("click", function () {
@@ -39,7 +37,7 @@ buttonRemove.addEventListener("click", function () {
         } 
     }
     if (counter > 0) {
-        removeChoosenNumber.textContent = `${selectedNumber} was removed ${counter} times.`;
+        removeChoosenNumber.textContent = `${choosenNumber.textContent} was removed ${counter} times.`;
     } else {
         removeChoosenNumber.textContent = `Nothing to remove`;
     }

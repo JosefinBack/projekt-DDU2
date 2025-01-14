@@ -2,6 +2,7 @@ const buttonReset = document.getElementById("reset");
 let inputSumOfNumbers = document.getElementById("sum");
 let sumOfMarkedNumbers = document.getElementById("marked");
 
+sumOfMarkedNumbers.textContent = "-";
 let sumNumber = 0; 
 
 function sumOfNumbers (array) {
@@ -12,12 +13,17 @@ function sumOfNumbers (array) {
   return resultOfNumbers;
 }; 
 
-sumOfMarkedNumbers.textContent = "-";
-let totalSum = sumOfNumbers(randomNumbers); 
-inputSumOfNumbers.textContent = totalSum; 
-
 buttonCreate.addEventListener("click", function (){
   inputSumOfNumbers.textContent = sumOfNumbers(randomNumbers); 
+});
+
+containerNumber.addEventListener("click", function (event) {
+  if (event.target.classList.contains("numberInDiv")) {
+      event.target.classList.add("target");
+
+      sumNumber = Number(event.target.textContent) + sumNumber;
+      sumOfMarkedNumbers.textContent = sumNumber;
+  }
 });
 
 
@@ -29,13 +35,4 @@ buttonReset.addEventListener("click", function (){
 
     sumOfMarkedNumbers.textContent = "-";
     sumNumber = 0; 
-});
-
-containerNumber.addEventListener("click", function (event) {
-  if (event.target.classList.contains("numberInDiv")) {
-      event.target.classList.add("target");
-
-      sumNumber = Number(event.target.textContent) + sumNumber;
-      sumOfMarkedNumbers.textContent = sumNumber;
-  }
 });

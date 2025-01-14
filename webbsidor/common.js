@@ -22,9 +22,7 @@ const input = document.createElement("input");
 input.type = "text"; 
 input.id = "number"; 
 input.classList.add("boxWithNumbers");
-box1.appendChild(input); 
-
-let howManyInGrid = document.querySelector("input"); 
+box1.appendChild(input);  
 
 const buttonCreate = document.createElement("button");
 buttonCreate.textContent = "Create"; 
@@ -54,7 +52,7 @@ function createDivs(numberFromUser) {
 }; 
 
 buttonCreate.addEventListener("click", function () {
-    let numberFromUser = howManyInGrid.value; 
+    let numberFromUser = input.value; 
     createDivs(numberFromUser);
   });
 

@@ -23,7 +23,7 @@ function mostRepeatedNumbers() {
             }
         }
     }
-    repeatedNumbers.textContent = `${mostRepeatedNumbers.join(", ")} (Repeated ${highestCount} times)`;
+    repeatedNumbers.textContent = `${mostRepeatedNumbers.join(" , ")} (Repeated ${highestCount} times)`;
 
     for (let x = 0; x < numberInDivs.length; x++) {
         if(mostRepeatedNumbers.includes(Number(numberInDivs[x].textContent))) {
@@ -36,7 +36,7 @@ function theMissingNumbers() {
     let missingNumbers = []; 
 
     for (let i = 0; i <= 100; i++) {
-        if(!randomNumbers.includes(i)) {//om randomNumber INTE innehåller i
+        if(!randomNumbers.includes(i)) {
             missingNumbers.push(i); 
         }
     }

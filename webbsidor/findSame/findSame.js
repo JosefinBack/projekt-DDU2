@@ -23,7 +23,7 @@ containerNumber.addEventListener("click", function(event) {
     }
 });  
 
-resetButton.addEventListener("click", function (){
+resetButton.addEventListener("click", function(){
     for(let i = 0; i < numberInDivs.length; i++) {
         if (numberInDivs[i].classList.contains("same")) {
             numberInDivs[i].classList.remove("same"); 
